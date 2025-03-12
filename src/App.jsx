@@ -5,6 +5,7 @@ import SlotMachine from "./components/SlotMachine";
 import BetControls from "./components/BetControls";
 import ResultDisplay from "./components/ResultDisplay";
 import CashOut from "./components/CashOut";
+import UserProfile from "./components/UserProfile";
 import "./App.css";
 
 
@@ -84,7 +85,6 @@ const App = () => {
           $<span className="profit-sum">{wins - losses}</span> | <span className="wallet">WALLET: </span>$<span className="wallet-sum">{wallet}</span>
         </p>
       </div>
-      {userName ? alert(`Hello ${userName},welcome to Slot Machine Game have fun!`) : ""}
       {wallet < 5 ? (
         <Wallet loadWallet={loadWallet} />
       ) : (
@@ -108,6 +108,7 @@ const App = () => {
           <CashOut cashOut={cashOut} />
           <Deposit depositMoney={depositMoney} />
           <Wallet loadWallet={loadWallet} />
+          <UserProfile username={userName} setUsername={setUserName} />
         </>
       )}
     </div>

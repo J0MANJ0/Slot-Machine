@@ -84,6 +84,17 @@ p.status > .wallet,.wallet-sum{
   color: #aaae8e;
 }
 
+div.user-profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #70e000;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+
 /* Buttons */
 button {
   padding: 12px 30px;
