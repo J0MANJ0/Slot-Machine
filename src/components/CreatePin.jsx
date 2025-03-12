@@ -3,7 +3,10 @@ import React, { useState } from 'react'
 const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubmit }) => {
 
     const handleSubmit = () => {
-        if (pin === confirmPin) {
+        if (!pin && !confirmPin) {
+            alert("No PIN created, kindly create one.")
+            setIsSubmit(isSubmit)
+        } else if (pin === confirmPin) {
             alert("Done!!")
             setIsSubmit(!isSubmit)
         } else {
@@ -17,7 +20,7 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
                 <label htmlFor="pin">
                     Create PIN:
                     <input
-                        type="text"
+                        type="number"
                         value={pin}
                         placeholder='example 1234'
                         maxLength={4}
@@ -26,7 +29,7 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
                 <label htmlFor="confirm">
                     Confirm PIN:
                     <input
-                        type="text"
+                        type="number"
                         value={confirmPin}
                         placeholder='Confirm Your PIN'
                         maxLength={4}

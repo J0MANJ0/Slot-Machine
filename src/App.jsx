@@ -19,8 +19,8 @@ const App = () => {
   const [losses, setLosses] = useState(0);
   const [wallet, setWallet] = useState(0);
   const [userName, setUserName] = useState("")
-  const [pin, setPin] = useState("")
-  const [confirmPin, setConfirmPin] = useState("")
+  const [pin, setPin] = useState(0)
+  const [confirmPin, setConfirmPin] = useState(0)
   const [isSubmit, setIsSubmit] = useState(false)
 
 
