@@ -36,16 +36,6 @@ const App = () => {
   const loadWallet = (load) => {
     setWallet((prev) => prev + load);
   };
-
-  // if (wins > 100 && !losses) {
-  //   alert(
-  //     `Congratulations you have received $50 bonus. Your wallet balance is $${
-  //       wallet + 50
-  //     }`
-  //   );
-  //   setWallet((prev) => prev + 50);
-  // }
-
   const cashOut = () => {
     const cashOutAmount = Number(
       prompt(

@@ -53,19 +53,16 @@ const SlotMachine = ({
       <div className="reels-container">
         {result.length > 0
           ? result.map((num, i) => (
-              <div key={i} className={`reel ${isSpinning ? "" : "stopped"}`}>
-                {num}
-              </div>
-            ))
+            <div key={i} className={`reel ${isSpinning ? "" : "stopped"}`}>
+              {num}
+            </div>
+          ))
           : Array.from({ length: reels }).map((_, i) => (
-              <div key={i} className={`reel ${isSpinning ? "" : "stopped"}`}>
-                {isSpinning ? "$" : "-"}
-              </div>
-            ))}
+            <div key={i} className={`reel ${isSpinning ? "" : "stopped"}`}>
+              {isSpinning ? "$" : "-"}
+            </div>
+          ))}
       </div>
-      {/* <div>
-        {result.length ? `RESULT: ${result.join(" | ")}` : `Spin to play!`}
-      </div> */}
     </div>
   );
 };
