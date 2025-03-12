@@ -15,6 +15,12 @@ const App = () => {
   const [wins, setWins] = useState(0);
   const [losses, setLosses] = useState(0);
   const [wallet, setWallet] = useState(0);
+  const [userName, setUserName] = useState("")
+
+  if (userName === "") {
+    const name = prompt("Enter your name: ")
+    setUserName(name)
+  }
 
   const depositMoney = (amount) => {
     if (amount > wallet) {
@@ -68,8 +74,6 @@ const App = () => {
   // }
   return (
     <div className="App">
-      {/* <NavBar /> */}
-      {/* <SetUpPin setUpPin={setUpPin} userPin={pin} /> */}
       <h1>SLOT MACHINE GAME</h1>
       <div className="display-status">
         <p className="display-balance">
@@ -80,6 +84,7 @@ const App = () => {
           $<span className="profit-sum">{wins - losses}</span> | <span className="wallet">WALLET: </span>$<span className="wallet-sum">{wallet}</span>
         </p>
       </div>
+      {userName ? alert(`Hello ${userName},welcome to Slot Machine Game have fun!`) : ""}
       {wallet < 5 ? (
         <Wallet loadWallet={loadWallet} />
       ) : (
