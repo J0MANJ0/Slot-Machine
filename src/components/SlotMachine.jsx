@@ -16,8 +16,7 @@ const SlotMachine = ({
     if (totalBet > balance) {
       alert("Insufficient balance!! Kindly deposit into your balance");
       return;
-    }
-    else if (isNaN(totalBet)) {
+    } else if (isNaN(totalBet)) {
       alert("Seems your bet per reel was empty")
       return balance;
     }
