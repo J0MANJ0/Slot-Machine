@@ -1,1 +1,1 @@
-# This is a slot machine game meant for playing for fun. Enjoy 😊.
+# This is a slot machine game meant for playing for fun. Enjoy 😊😊.
