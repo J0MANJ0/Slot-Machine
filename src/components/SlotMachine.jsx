@@ -26,7 +26,7 @@ const SlotMachine = ({
 
     setTimeout(() => {
       const spinResult = Array.from({ length: reels }, () =>
-        Math.floor(Math.random() * 1)
+        Math.floor(Math.random() * 2)
       );
       setResult(spinResult);
 
