@@ -88,12 +88,53 @@ div.user-profile{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #70e000;
+  background-color: transparent;
   margin-top: 20px;
   padding: 20px;
   border-radius: 50px;
 }
 
+div.profile{
+  background-color: #16a34a;
+  padding: 10px 15px;
+  border-radius: 40px;
+  box-shadow: 0 0px 6px rgba(219, 191, 191, 0.8);
+}
+
+div.profile > span.user{
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #72efdd;
+}
+
+div.profile > span.name{
+  color: #ebf2fa;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+div.change-profile > button{
+  background-color: #3c096c;
+}
+
+div.pin-container > form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+div.pin-container > form > label > input{
+  display: flex;
+  justify-content: center;
+}
+
+div.pin-container > form > label > input::placeholder{
+  font-size: 0.85rem;
+  text-align: center;
+}
 
 /* Buttons */
 button {

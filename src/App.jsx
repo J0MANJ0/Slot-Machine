@@ -6,6 +6,8 @@ import BetControls from "./components/BetControls";
 import ResultDisplay from "./components/ResultDisplay";
 import CashOut from "./components/CashOut";
 import UserProfile from "./components/UserProfile";
+import CreatePin from "./components/CreatePin";
+import IntroUI from "./components/IntroUI";
 import "./App.css";
 
 
@@ -17,6 +19,10 @@ const App = () => {
   const [losses, setLosses] = useState(0);
   const [wallet, setWallet] = useState(0);
   const [userName, setUserName] = useState("")
+  const [pin, setPin] = useState(0)
+  const [confirmPin, setConfirmPin] = useState(0)
+  const [isSubmit, setIsSubmit] = useState(false)
+
 
   if (userName === "") {
     const name = prompt("Enter your name: ")
@@ -75,18 +81,15 @@ const App = () => {
   // }
   return (
     <div className="App">
-      <h1>SLOT MACHINE GAME</h1>
-      <div className="display-status">
-        <p className="display-balance">
-          <span className="balance">BALANCE: </span>$<span className="balance-sum">{balance}</span>
-        </p>
-        <p className="status">
-          <span className="wins">WINS: </span>$<span className="win-sum">{wins}</span> | <span className="losses">LOSSES: </span>$<span className="loss-sum">{losses}</span> | <span className="profit">PROFIT: </span>
-          $<span className="profit-sum">{wins - losses}</span> | <span className="wallet">WALLET: </span>$<span className="wallet-sum">{wallet}</span>
-        </p>
-      </div>
-      {wallet < 5 ? (
-        <Wallet loadWallet={loadWallet} />
+      {wallet < 100 ? null : <IntroUI wins={wins} losses={losses} balance={balance} wallet={wallet} />}
+
+      {isSubmit === false ?
+        <CreatePin pin={pin} setPin={setPin} confirmPin={confirmPin} setConfirmPin={setConfirmPin} setIsSubmit={setIsSubmit} isSubmit={isSubmit} />
+        : null}
+      {isSubmit === false ? (
+        <>
+          <Wallet loadWallet={loadWallet} />
+        </>
       ) : (
         <>
           <BetControls

@@ -9,6 +9,7 @@ const Welcome = ({ username, setUsername }) => {
 
         if (oldProfile === username) {
             const newProfile = prompt("Enter your new name: ")
+            alert(`Username changed from ${username} to ${newProfile}`)
             setUsername(newProfile)
         } else {
             alert("The name does not match the current name, try again!")
@@ -17,6 +18,7 @@ const Welcome = ({ username, setUsername }) => {
                 const oldProfile = prompt("Confirm your current name before you proceed: ")
                 if (oldProfile === username) {
                     const newProfile = prompt("Enter your new name: ")
+                    alert(`Username changed from ${username} to ${newProfile}`)
                     setUsername(newProfile)
                 } else {
                     alert("The name does not still match the curent name")
@@ -32,7 +34,7 @@ const Welcome = ({ username, setUsername }) => {
     return (
         <div className="user-profile">
             <div className="profile">
-                <span>Username: {username}</span>
+                <span className='user'>Username: </span><span className='name'>{username}</span>
             </div>
             <div className="change-profile">
                 <button onClick={handleProfileChange}>Change Profile</button>
