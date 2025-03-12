@@ -3,7 +3,7 @@ import React from "react";
 const CashOut = ({ cashOut }) => {
   return (
     <div className="cash-out">
-      <button onClick={cashOut}>Cash Out</button>
+      <button onClick={cashOut}>Withdraw</button>
     </div>
   );
 };

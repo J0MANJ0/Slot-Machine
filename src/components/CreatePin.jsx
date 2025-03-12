@@ -4,10 +4,10 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
 
     const handleSubmit = () => {
         if (pin === confirmPin) {
-            alert("success")
+            alert("Done!!")
             setIsSubmit(!isSubmit)
         } else {
-            alert(`${pin}`)
+            alert("PIN does not match")
             setIsSubmit(isSubmit)
         }
     }
@@ -17,16 +17,16 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
                 <label htmlFor="pin">
                     Create PIN:
                     <input
-                        type="password"
+                        type="text"
                         value={pin}
-                        placeholder='Create your PIN'
+                        placeholder='example 1234'
                         maxLength={4}
                         onChange={(e) => setPin(e.target.value)} />
                 </label>
                 <label htmlFor="confirm">
                     Confirm PIN:
                     <input
-                        type="password"
+                        type="text"
                         value={confirmPin}
                         placeholder='Confirm Your PIN'
                         maxLength={4}

@@ -19,8 +19,8 @@ const App = () => {
   const [losses, setLosses] = useState(0);
   const [wallet, setWallet] = useState(0);
   const [userName, setUserName] = useState("")
-  const [pin, setPin] = useState(0)
-  const [confirmPin, setConfirmPin] = useState(0)
+  const [pin, setPin] = useState("")
+  const [confirmPin, setConfirmPin] = useState("")
   const [isSubmit, setIsSubmit] = useState(false)
 
 
@@ -55,22 +55,29 @@ const App = () => {
       )
     );
 
+
     if (cashOutAmount > balance) {
       alert(
-        `Sorry! Your request to cash out $${cashOutAmount} has failed due to insufficient balance. Your current balance is $${balance}.`
+        `Sorry! Your request to withdraw $${cashOutAmount} has failed due to insufficient balance. Your current balance is $${balance}.`
       );
     } else if (isNaN(cashOutAmount) || cashOutAmount < 50) {
       alert(
-        "Invalid input! Kindly enter a valid amount. Minimum cash out is $50."
+        "Invalid input! Kindly enter a valid amount. Minimum withdrawal amount is $50."
       );
     } else if (cashOutAmount > 50000) {
       alert(
-        "Sorry! Your maximum cash out amount is limited to $50,000. Try a lower amount."
+        "Sorry! Your maximum withdraw amount is limited to $50,000. Try a lower amount."
       );
     } else {
-      alert(`Congratulations you have received $${cashOutAmount}.`);
-      setBalance((prev) => prev - cashOutAmount);
-      setWallet((prev) => prev + cashOutAmount);
+      const enterPIN = prompt("Enter PIN : ")
+
+      if (cashOutAmount > 50 && enterPIN === pin) {
+        alert(`Congratulations ${userName} you have received $${cashOutAmount}.`);
+        setBalance((prev) => prev - cashOutAmount);
+        setWallet((prev) => prev + cashOutAmount);
+      } else {
+        alert("Failed to withdraw, incorrect PIN")
+      }
     }
     setWins(0);
     setLosses(0);
