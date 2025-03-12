@@ -5,8 +5,6 @@ import SlotMachine from "./components/SlotMachine";
 import BetControls from "./components/BetControls";
 import ResultDisplay from "./components/ResultDisplay";
 import CashOut from "./components/CashOut";
-// import NavBar from "./components/NavBar";
-// import SetUpPin from "./components/SetUpPin";
 import "./App.css";
 
 
