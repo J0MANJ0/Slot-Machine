@@ -8,7 +8,7 @@ import CashOut from "./components/CashOut";
 // import NavBar from "./components/NavBar";
 // import SetUpPin from "./components/SetUpPin";
 import "./App.css";
-import ReactConfetti from "react-confetti";
+
 
 const App = () => {
   const [balance, setBalance] = useState(0);
