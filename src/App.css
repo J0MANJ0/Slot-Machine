@@ -1,0 +1,239 @@
+
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #001d3d;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  text-align: center;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black for contrast */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffd700; /* Gold border for a casino vibe */
+}
+
+
+
+/* Header Styling */
+h1 {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #ffeb3b;
+  margin: 20px 0;
+  text-shadow: 0 0 5px rgba(255, 235, 59, 0.5);
+}
+
+/* Balance, Wins, Losses Display */
+p {
+  font-size: 1.3rem;
+  margin: 15px 0;
+  color: #e5e7eb;
+}
+
+p span {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* Buttons */
+button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #dc2626;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+button:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.8);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Input and Select Styling */
+input, select {
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  margin: 10px;
+  width: 160px;
+  background-color: #1f2937;
+  color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #ffeb3b;
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+}
+
+/* Deposit Section */
+.deposit-container {
+  background-color: rgba(31, 41, 55, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+/* Bet Controls */
+.bet-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  background-color: rgba(31, 41, 55, 0.9);
+  border-radius: 15px;
+  margin: 25px 0;
+}
+
+.bet-controls label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+/* Slot Machine */
+.slot-machine {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  margin: 25px 0;
+  position: relative;
+}
+
+.reels-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 15px;
+  background: #1f2937;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+}
+
+.reel {
+  width: 80px;
+  height: 100px;
+  background-color: #fff;
+  color: #dc2626;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  animation: spinReel 0.8s ease-in-out infinite;
+}
+
+/* Spinning Animation for Reels */
+@keyframes spinReel {
+  0% { transform: translateY(-100%) rotateX(0deg); opacity: 0; }
+  50% { transform: translateY(0) rotateX(180deg); opacity: 1; }
+  100% { transform: translateY(100%) rotateX(360deg); opacity: 0; }
+}
+
+.reel.stopped {
+  animation: none;
+  transform: translateY(0) rotateX(0deg);
+}
+
+/* Result Display */
+.result-display {
+  padding: 20px;
+  background-color: rgba(254, 252, 191, 0.9);
+  border-radius: 15px;
+  margin: 25px 0;
+  color: #854d0e;
+}
+
+.result-display h3{
+  color: #588157;
+}
+
+.result-display span{
+  font-size: 1.5rem;
+}
+
+/* Cash Out */
+.cash-out button {
+  background-color: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+}
+
+.cash-out button:hover {
+  background-color: #16a34a;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  input, select {
+    width: 130px;
+  }
+
+  .bet-controls {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .reel {
+    width: 60px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
