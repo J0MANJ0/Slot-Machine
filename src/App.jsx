@@ -8,6 +8,7 @@ import CashOut from "./components/CashOut";
 // import NavBar from "./components/NavBar";
 // import SetUpPin from "./components/SetUpPin";
 import "./App.css";
+import ReactConfetti from "react-confetti";
 
 const App = () => {
   const [balance, setBalance] = useState(0);
@@ -63,6 +64,10 @@ const App = () => {
     setWins(0);
     setLosses(0);
   };
+
+  // if (wins - losses > 599 && wins - losses < 601) {
+  //   alert(`Congratulations you have received your $50 bonus. Your balance is $${balance + 50}.`)
+  // }
   return (
     <div className="App">
       {/* <NavBar /> */}

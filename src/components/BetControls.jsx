@@ -28,6 +28,7 @@ const BetControls = ({
           onChange={(e) => setBetPerReel(parseInt(e.target.value))}
           min={1}
           max={balance}
+          required
         />
       </label>
     </div>
