@@ -234,7 +234,7 @@ input:focus, select:focus {
 /* Responsive Design */
 @media (max-width: 600px) {
   .App {
-    margin: 10px;
+    margin: 20px;
     padding: 20px;
   }
 
