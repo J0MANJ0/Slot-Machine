@@ -4,11 +4,11 @@ const Deposit = ({ depositMoney }) => {
   const [amount, setAmount] = useState("");
   const handleDeposit = () => {
     const deposit = parseFloat(amount);
-    if (deposit >= 5) {
+    if (deposit >= 3) {
       depositMoney(deposit);
       setAmount("");
     } else {
-      alert("Minimum deposit is $5");
+      alert("Minimum deposit is $3");
     }
   };
   return (
