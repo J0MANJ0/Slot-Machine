@@ -139,6 +139,10 @@ div.pin-container > form > label > input::placeholder{
   color: #f3de2c;
 }
 
+div.pin-container > form > label > input{
+  text-align: center;
+}
+
 div.pin-container > button{
   background-color: #f3de2c;
   color: #000;
@@ -198,6 +202,7 @@ div.deposit-container {
 
 div.deposit-container > input{
   color: #70e000;
+  text-align: center;
 }
 /* Bet Controls */
 .bet-controls {
