@@ -137,6 +137,7 @@ div.pin-container > form > label > input::placeholder{
   font-size: 0.85rem;
   text-align: center;
   color: #f3de2c;
+  opacity: 0.5;
 }
 
 div.pin-container > form > label > input{
