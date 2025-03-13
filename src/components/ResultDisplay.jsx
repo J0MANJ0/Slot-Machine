@@ -7,7 +7,7 @@ const ResultDisplay = ({ balance }) => {
       {balance > 0 ? (
         <span>Keep playing? Balance: ${balance}</span>
       ) : (
-        <span>Game over! No balance left.</span>
+        <span>No balance left.</span>
       )}
     </div>
   );
