@@ -65,23 +65,39 @@ p span {
 }
 
 p.display-balance > .balance,.balance-sum{
+  margin-left: 5px;
   color: #fff9c5;
+}
+
+p.status{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 p.status > .wins,.win-sum{
   color: #72ddf7;
+  margin-right: 10px;
 }
 
 p.status > .losses,.loss-sum{
   color: #bc3908;
+  margin-right: 10px;
+  margin-left: 5px;
+
 }
 
 p.status > .profit,.profit-sum{
   color: #70e000;
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 p.status > .wallet,.wallet-sum{
   color: #aaae8e;
+  margin-right: 10px;
+  margin-left: 5px;
 }
 
 div.user-profile{
