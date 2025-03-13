@@ -14,7 +14,7 @@ const SlotMachine = ({
   const spinReels = () => {
     const totalBet = reels * betPerReel;
     if (totalBet > balance) {
-      alert("Insufficient balance!! Kindly deposit into your balance");
+      alert("Your stake is greater than your balance. Try a lower amount or deposit into your balance.");
       return;
     } else if (isNaN(totalBet)) {
       alert("Your bet per reel is null")
@@ -31,7 +31,7 @@ const SlotMachine = ({
       setResult(spinResult);
 
       const isWin = spinResult.every((val) => val === spinResult[0]);
-      const payout = isWin ? totalBet * 2 : 0;
+      const payout = isWin ? totalBet * 3 : 0;
 
       setBalance(balance - (totalBet + payout));
       if (isWin) {
@@ -47,9 +47,23 @@ const SlotMachine = ({
       setIsSpinning(false);
     }, 1500);
   };
+
+  if (!betPerReel) {
+    return null;
+  }
   return (
     <div className="slot-machine">
       <h3>SLOT MACHINE</h3>
+      <div className="stake-container">
+        <div className="stake">
+          <span className="stake-title">Stake: </span>
+          <span className="total-stake">$ {reels * betPerReel}</span>
+        </div>
+        <div className="payout">
+          <span className="payout-title">Possible Payout: </span>
+          <span total-payout>$ {reels * betPerReel * 3}</span>
+        </div>
+      </div>
       <button onClick={spinReels} disabled={isSpinning}>
         {isSpinning ? "Spinning..." : "Spin"}
       </button>
