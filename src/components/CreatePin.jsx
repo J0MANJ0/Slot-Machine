@@ -7,7 +7,7 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
             alert("No PIN created, kindly create one.")
             setIsSubmit(isSubmit)
         } else if (pin === confirmPin) {
-            alert("Done!!")
+            alert("Successfully created your PIN.")
             setIsSubmit(!isSubmit)
         } else {
             alert("PIN does not match")
