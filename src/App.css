@@ -130,6 +130,7 @@ div.pin-container > form{
 div.pin-container > form > label > input{
   display: flex;
   justify-content: center;
+  color: #f3de2c;
 }
 
 div.pin-container > form > label > input::placeholder{
@@ -187,7 +188,7 @@ input:focus, select:focus {
 }
 
 /* Deposit Section */
-.deposit-container {
+div.deposit-container {
   background-color: rgba(31, 41, 55, 0.9);
   padding: 25px;
   border-radius: 15px;
@@ -195,6 +196,9 @@ input:focus, select:focus {
   margin-top: 10px;
 }
 
+div.deposit-container > input{
+  color: #70e000;
+}
 /* Bet Controls */
 .bet-controls {
   display: flex;
