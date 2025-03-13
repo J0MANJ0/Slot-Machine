@@ -35,9 +35,16 @@ const App = () => {
         `You can't deposit $${amount} since your wallet balance is $${wallet}`
       );
       return wallet;
-    } else if (wallet > 5) {
-      setBalance((prev) => prev + amount);
-      setWallet((prev) => prev - amount);
+    } else if (wallet > 3) {
+      const enterPIN = prompt("Enter PIN: ")
+      if (enterPIN === pin && wallet > 3) {
+        setBalance((prev) => prev + amount);
+        setWallet((prev) => prev - amount);
+        alert(`You have sent $${amount} to Slot Machine Game. Your new balance is $${balance + amount}`)
+      } else {
+        alert("Wrong PIN!! Try again later.")
+      }
+
     } else {
       alert(
         `It seems your wallet doesn't have atleast $5 to deposit. Your wallet balance is $${wallet}`
@@ -95,7 +102,7 @@ const App = () => {
         : null}
       {isSubmit === false ? (
         <>
-          <Wallet loadWallet={loadWallet} />
+          <Wallet loadWallet={loadWallet} pin={pin} wallet={wallet} />
         </>
       ) : (
         <>
