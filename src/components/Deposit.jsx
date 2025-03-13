@@ -18,7 +18,7 @@ const Deposit = ({ depositMoney }) => {
         type="number"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        placeholder="Enter amont"
+        placeholder="Enter amount"
         min={3}
       />
       <button onClick={handleDeposit}>Deposit</button>

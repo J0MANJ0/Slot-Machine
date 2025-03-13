@@ -20,7 +20,7 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
                 <label htmlFor="pin">
                     Create PIN:
                     <input
-                        type="number"
+                        type="text"
                         value={pin}
                         placeholder='example 1234'
                         maxLength={4}
@@ -29,9 +29,9 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
                 <label htmlFor="confirm">
                     Confirm PIN:
                     <input
-                        type="number"
+                        type="text"
                         value={confirmPin}
-                        placeholder='Confirm Your PIN'
+                        placeholder='Confirm PIN'
                         maxLength={4}
                         onChange={(e) => setConfirmPin(e.target.value)} />
                 </label>

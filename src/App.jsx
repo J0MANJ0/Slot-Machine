@@ -19,8 +19,8 @@ const App = () => {
   const [losses, setLosses] = useState(0);
   const [wallet, setWallet] = useState(0);
   const [userName, setUserName] = useState("")
-  const [pin, setPin] = useState(0)
-  const [confirmPin, setConfirmPin] = useState(0)
+  const [pin, setPin] = useState("")
+  const [confirmPin, setConfirmPin] = useState("")
   const [isSubmit, setIsSubmit] = useState(false)
 
 
@@ -51,7 +51,7 @@ const App = () => {
   const cashOut = () => {
     const cashOutAmount = Number(
       prompt(
-        `Cash out Amount: minimum cash out is $50.Your balance $${balance}`
+        `Withdraw amount: minimum withdraw is $50.Your balance $${balance}`
       )
     );
 
@@ -75,12 +75,12 @@ const App = () => {
         alert(`Congratulations ${userName} you have received $${cashOutAmount}.`);
         setBalance((prev) => prev - cashOutAmount);
         setWallet((prev) => prev + cashOutAmount);
+        setWins(0);
+        setLosses(0);
       } else {
         alert("Failed to withdraw, incorrect PIN")
       }
     }
-    setWins(0);
-    setLosses(0);
   };
 
   // if (wins - losses > 599 && wins - losses < 601) {

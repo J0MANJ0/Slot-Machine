@@ -112,6 +112,7 @@ div.profile > span.name{
   color: #ebf2fa;
   font-size: 1.15rem;
   font-weight: bold;
+  text-decoration: underline 2px #ffd700;
 }
 
 div.change-profile > button{
@@ -286,8 +287,10 @@ input:focus, select:focus {
 /* Responsive Design */
 @media (max-width: 600px) {
   .App {
-    margin: 20px;
-    padding: 20px;
+    margin: 0;
+    padding: 10px;
+    width: 100vw;
+    height: 100%;
   }
 
   h1 {
@@ -312,5 +315,18 @@ input:focus, select:focus {
     width: 60px;
     height: 80px;
     font-size: 2rem;
+  }
+  div.user-profile{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  div.pin-container > form > label > input::placeholder{
+  font-size: 0.8em;
+  text-align: center;
+  }
+  div.deposit-container > input::placeholder{
+    font-size: 0.8em;
+    text-align: center;
   }
 }
