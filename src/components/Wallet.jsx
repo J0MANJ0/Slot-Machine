@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
-const Wallet = ({ loadWallet, pin, wallet }) => {
+const Wallet = ({ loadWallet, pin }) => {
   const [amount, setAmount] = useState("");
 
   const handleWallet = () => {
     const load = parseFloat(amount);
-    const enterPIN = prompt("Enter PIN: ")
-    if (load >= 100 && enterPIN === pin) {
-      alert(`Your new wallet balance is $${load + wallet}`)
+    if (load >= 100) {
       loadWallet(load);
       setAmount("");
     } else {

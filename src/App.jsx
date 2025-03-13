@@ -53,7 +53,13 @@ const App = () => {
   };
 
   const loadWallet = (load) => {
-    setWallet((prev) => prev + load);
+    const enterPIN = prompt("Enter PIN: ")
+    if (enterPIN === pin) {
+      alert(`Your new wallet amount is $${wallet + load}`)
+      setWallet((prev) => prev + load);
+    } else {
+      alert("Wrong PIN!! Try again.")
+    }
   };
   const cashOut = () => {
     const cashOutAmount = Number(
@@ -102,7 +108,7 @@ const App = () => {
         : null}
       {isSubmit === false ? (
         <>
-          <Wallet loadWallet={loadWallet} pin={pin} wallet={wallet} />
+          <Wallet loadWallet={loadWallet} pin={pin} />
         </>
       ) : (
         <>

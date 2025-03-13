@@ -135,6 +135,13 @@ div.pin-container > form > label > input{
 div.pin-container > form > label > input::placeholder{
   font-size: 0.85rem;
   text-align: center;
+  color: #f3de2c;
+}
+
+div.pin-container > button{
+  background-color: #f3de2c;
+  color: #000;
+  font-weight: bold;
 }
 
 /* Buttons */
