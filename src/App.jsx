@@ -24,7 +24,9 @@ const App = () => {
   const [isSubmit, setIsSubmit] = useState(false)
 
 
+
   if (userName === "") {
+    alert("ALERT !! This is not an actual game, so no real money is needed for you to play. Assume some digits in the inputs to continue playing. Have fun ahead!!")
     const name = prompt("Enter your name: ")
     setUserName(name)
   }
@@ -88,10 +90,8 @@ const App = () => {
         alert(`Congratulations ${userName} you have received $${cashOutAmount}.`);
         setBalance((prev) => prev - cashOutAmount);
         setWallet((prev) => prev + cashOutAmount);
-        console.log(pin)
       } else {
         alert("Failed to withdraw, incorrect PIN")
-        console.log(pin)
       }
     }
   };
@@ -101,7 +101,11 @@ const App = () => {
   // }
   return (
     <div className="App">
-      {wallet < 100 ? null : <IntroUI wins={wins} losses={losses} balance={balance} wallet={wallet} />}
+      {wallet < 100 ? null :
+        <>
+          <IntroUI wins={wins} losses={losses} balance={balance} wallet={wallet} />
+        </>
+      }
 
       {isSubmit === false ?
         <CreatePin pin={pin} setPin={setPin} confirmPin={confirmPin} setConfirmPin={setConfirmPin} setIsSubmit={setIsSubmit} isSubmit={isSubmit} />
