@@ -91,6 +91,7 @@ const App = () => {
         console.log(pin)
       } else {
         alert("Failed to withdraw, incorrect PIN")
+        console.log(pin)
       }
     }
   };
