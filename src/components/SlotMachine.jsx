@@ -26,7 +26,7 @@ const SlotMachine = ({
 
     setTimeout(() => {
       const spinResult = Array.from({ length: reels }, () =>
-        Math.floor(Math.random() * 2)
+        Math.floor(Math.random() * 1)
       );
       setResult(spinResult);
 
@@ -45,12 +45,18 @@ const SlotMachine = ({
         setLosses((prev) => prev + totalBet);
       }
       setIsSpinning(false);
-    }, 1500);
+    }, 2500);
   };
 
   if (!betPerReel) {
     return null;
   }
+
+  // console.log(navigator.appName)
+  // const learnToCode = () => {
+  //   return window.open("http://www.w3schools.com")
+  // }
+
   return (
     <div className="slot-machine">
       <h3>SLOT MACHINE</h3>

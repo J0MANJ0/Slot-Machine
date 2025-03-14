@@ -88,6 +88,7 @@ const App = () => {
         alert(`Congratulations ${userName} you have received $${cashOutAmount}.`);
         setBalance((prev) => prev - cashOutAmount);
         setWallet((prev) => prev + cashOutAmount);
+        console.log(pin)
       } else {
         alert("Failed to withdraw, incorrect PIN")
       }

@@ -17,7 +17,7 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
     return (
         <div className='pin-container'>
             <form action>
-                <label htmlFor="pin">
+                <label htmlFor={pin} id={pin}>
                     Create PIN:
                     <input
                         type="text"
@@ -26,7 +26,7 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
                         maxLength={4}
                         onChange={(e) => setPin(e.target.value)} />
                 </label>
-                <label htmlFor="confirm">
+                <label htmlFor={confirmPin} id={confirmPin}>
                     Confirm PIN:
                     <input
                         type="text"
