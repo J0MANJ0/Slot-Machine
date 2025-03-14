@@ -16,6 +16,7 @@ const CreatePin = ({ pin, setPin, confirmPin, setConfirmPin, isSubmit, setIsSubm
     }
     return (
         <div className='pin-container'>
+            {alert("This is not an actual game, so real money is needed for you to play. Assume some digits in the inputs to continue playing. Have fun ahead!!")}
             <form action>
                 <label htmlFor={pin} id={pin}>
                     Create PIN:
